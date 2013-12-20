@@ -1,6 +1,6 @@
 from datetime import datetime, date
 import random
-from subprocess import call
+import subprocess
 
 __author__ = 'Tobias Wooldridge'
 
@@ -24,8 +24,7 @@ pixels = getPixels(image)
 
 
 dayStarted = date(2013, 12, 15)
-today = date(2013, 12, 23)
-# today = date.today()
+today = date.today()
 
 weeksRunning = int((today - dayStarted).days / 7)
 weekIndex = weeksRunning % len(pixels[0])
@@ -44,12 +43,10 @@ print (getImage(pixels))
 
 if todaysPixel == "M":
     for i in range(1, 30):
-        f = open('meep', 'w+')
-        f.write(".")
-        f.close()
+        with open('meep', 'a') as f:
+            f.write(".")
 
-        call(["git commit .", "-am 'tick'"])
+        subprocess.call(["git", "commit", "meep", "-m Tick"], stdout=subprocess.PIPE)
 
-
-    call(["git", "push"])
+    subprocess.call(["git", "push"])
 
