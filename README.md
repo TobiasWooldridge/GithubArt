@@ -1,7 +1,6 @@
 # Github Art
 
-This very simply script runs in a daily cron-job and makes commits to git and pushes them to github to draw artwork on
-my activity graph, looking like the following:
+This script runs in a daily cron-job, pushes dummy commits to github to draw artwork on my activity graph, looking like the following:
 
 
      MMMMM  MMM   MMMM   M  MMMM  MMMM  
@@ -11,4 +10,4 @@ my activity graph, looking like the following:
        M    MMM   MMMM   M  M  M  MMMM  
 
 
-Copy/paste/modify it. Do whatever you want with it. There's no need to reference me or anything.
+This isn't copyright. Do whatever you want with it.
